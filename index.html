@@ -513,8 +513,7 @@
     </dialog>
 
     <!-- NAVIGATION -->
-    <nav
-        class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-full shadow-[0_16px_40px_rgba(0,0,0,0.5)] transition-all duration-300">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-full shadow-[0_16px_40px_rgba(0,0,0,0.5)] transition-all duration-300">
         <div class="flex justify-between items-center px-6 py-3 w-full">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-3 no-underline">
@@ -524,7 +523,7 @@
             </a>
 
             <!-- Desktop Nav -->
-            <div class="hidden md:flex gap-8 items-center">
+            <div class="hidden md:flex gap-6 items-center">
                 <a href="#features"
                     class="font-['Epilogue'] font-medium text-slate-400 hover:text-slate-100 transition-colors">Features</a>
                 <a href="#screenshots"
@@ -552,7 +551,7 @@
     <main class="pt-16 w-full">
 
         <!-- HERO -->
-        <section class="relative px-margin-horizontal pt-10 pb-20 overflow-hidden w-full">
+        <section class="relative px-margin-horizontal pt-4 pb-20 overflow-hidden w-full">
             <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
                 <div
                     class="w-full h-full bg-gradient-to-l from-primary-container to-transparent blur-3xl rounded-full translate-x-1/2">
@@ -585,7 +584,7 @@
 
                 <!-- Interactive Phone Emulator Stage -->
                 <div
-                    class="flex-1 relative flex justify-center items-center py-0 z-10 scale-[0.75] sm:scale-[0.80] md:scale-[0.85] transform-gpu transition-all origin-center">
+                    class="flex-1 relative flex justify-center items-center py-0 z-10 scale-[0.68] sm:scale-[0.72] lg:scale-[0.78] -translate-y-12 transform-gpu transition-all origin-center">
                     <div class="phone-wrapper">
                         <div class="phone-frame">
                             <div class="phone-bezel">
@@ -1405,11 +1404,11 @@
                 <div class="text-center mb-16">
                     <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Downloads</h2>
                     <p class="text-on-surface-variant max-w-2xl mx-auto">
-                        Download the latest official release of Auralis for your platform.
+                        Download the latest official release of Auralis for Android.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="max-w-2xl mx-auto">
                     <!-- Android Card -->
                     <div class="glass-card rounded-xl p-8 border border-white/5">
                         <div class="flex items-center gap-4 mb-6">
@@ -1451,49 +1450,6 @@
                                 <span id="android-download-text">Download APK</span>
                             </a>
                             <p class="text-on-surface-variant font-label-sm">Requires Android 6.0+</p>
-                        </div>
-                    </div>
-
-                    <!-- Windows Card -->
-                    <div class="glass-card rounded-xl p-8 border border-white/5">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div
-                                class="w-12 h-12 rounded-full bg-primary-container/20 text-primary flex items-center justify-center flex-shrink-0">
-                                <span class="material-symbols-outlined">laptop_windows</span>
-                            </div>
-                            <div>
-                                <h3 class="font-title-lg text-on-surface">Windows</h3>
-                                <p class="text-on-surface-variant text-sm">Download the executable installer for PC.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="version-chip version-chip--stable">Windows Build</span>
-                            <span id="windows-version-badge" class="version-chip">v1.0.0</span>
-                        </div>
-
-                        <div class="flex flex-wrap gap-6 mb-8">
-                            <button id="windows-changelog-trigger"
-                                class="flex items-center gap-2 text-primary hover:text-on-primary-container transition-colors font-label-lg">
-                                <span class="material-symbols-outlined" style="font-size:18px">list_alt</span>
-                                <span>View Changelog</span>
-                            </button>
-                            <button id="windows-versions-trigger"
-                                class="flex items-center gap-2 text-primary hover:text-on-primary-container transition-colors font-label-lg">
-                                <span class="material-symbols-outlined" style="font-size:18px">history</span>
-                                <span>Previous versions</span>
-                            </button>
-                        </div>
-
-                        <div
-                            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6 border-t border-white/10">
-                            <a id="windows-download-btn" href="https://github.com/Likith-Yadav/Auralis/releases"
-                                target="_blank"
-                                class="flex items-center gap-3 bg-primary text-on-primary px-8 py-3 rounded-full font-label-lg ambient-glow hover:brightness-110 active:scale-95 transition-all no-underline">
-                                <span class="material-symbols-outlined">download</span>
-                                <span id="windows-download-text">Download Windows (.exe)</span>
-                            </a>
-                            <p class="text-on-surface-variant font-label-sm">Requires Windows 10/11</p>
                         </div>
                     </div>
                 </div>

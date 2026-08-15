@@ -1,6 +1,6 @@
 # Auralis
 
-An advanced YouTube Music client built with Material Design 3 for Android & Windows.
+An advanced YouTube Music client built with Material Design 3 for Android.
 
 Auralis is designed to offer a premium, modern, and elegant music listening experience with Google's latest design guidelines (Material Design 3). It features a beautiful, clean UI, smooth transitions, and deep integration with YouTube Music.
 

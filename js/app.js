@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function formatVersionTag(tag) {
-        if (!tag) return 'v6.0.0';
+        if (!tag) return 'v1.0.0';
         return tag.startsWith('v') || tag.startsWith('V') ? tag : `v${tag}`;
     }
 
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 winDownloadBtn.href = winExeAsset.browser_download_url;
             }
         } else if (windowsVersionBadge) {
-            windowsVersionBadge.textContent = 'v6.0.0';
+            windowsVersionBadge.textContent = 'v1.0.0';
         }
 
         updatePlatformDownloadButtons();
