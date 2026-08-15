@@ -126,12 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let allReleases = [
         {
-            tag_name: "1.0.0",
-            name: "Auralis v1.0.0",
-            published_at: "2026-08-15T08:00:00Z",
-            body: "### ✨ Auralis v1.0.0 Release Notes\n- 🎵 **Brand New Auralis Release**\n- 🚀 Integrated Time-Synced Lyrics (BetterLyrics Provider)\n- 🔒 Secure Firebase Authentication & Google Sign-In\n- 🎨 Elegant Dark Neon Green Material Design 3 UI\n- 🏎️ Optimizations for smooth streaming & large song cache",
+            tag_name: "2.0.0",
+            name: "Auralis v2.0.0",
+            published_at: "2026-08-15T18:00:00Z",
+            body: "### 🚀 Auralis v2.0.0 Release Notes\n- 🎨 **New Branding & Intro**: Updated app launcher icon framing and new animated splash screen (`icon_new-removebg.png`)\n- 👈👉 **Swipe to Change Song**: Horizontal swipe left/right on full player to skip tracks\n- 🖼️ **Custom Playlist Covers**: Set custom cover photos for playlists; reflects instantly across whole app & library\n- 👥 **Listen Together Server**: Built serverless backend on `auralismusicapp.vercel.app` for cloud listening sessions\n- 🌐 **Deep Link Auto-Redirect**: Opening song or `/join` links in browser auto-launches the app\n- 📊 **Global Leaderboard Fix**: Auto-registers all users on startup with accurate `0h` / `15m` formatting\n- 🛠️ **Fixes & Improvements**: Fixed playlist creation crash, removed duplicate shuffle button, and updated download links",
             assets: [
-                { name: "auralis-v1-release.apk", size: 38000000, browser_download_url: "https://github.com/Likith-Yadav/Auralis/releases/download/v1.0.0/auralis-v1-release.apk" }
+                { name: "auralis-v2-release.apk", size: 38000000, browser_download_url: "https://www.dropbox.com/scl/fi/9saq7iktqhw81rhjhe468/auralis-v2-release.apk?rlkey=c75zw5dukqdgciq8mlurqk5oe&st=7i35tm6z&dl=0" }
             ]
         }
     ];
