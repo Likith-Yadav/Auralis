@@ -9,7 +9,7 @@
         content="An advanced YouTube Music client built with Material Design 3 for Android.">
     <title>Auralis</title>
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0.2">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.3">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -1466,15 +1466,22 @@
                         </div>
 
                         <div
-                            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6 border-t border-white/10">
+                            class="flex flex-col md:flex-row items-stretch md:items-center gap-4 pt-6 border-t border-white/10">
                             <a id="android-download-btn"
                                  href="https://github.com/Likith-Yadav/Auralis/releases/download/v1.0.0/auralis-v1-release.apk"
                                  target="_blank"
-                                class="flex items-center gap-3 bg-primary text-on-primary px-8 py-3 rounded-full font-label-lg ambient-glow hover:brightness-110 active:scale-95 transition-all no-underline">
+                                class="flex-1 flex items-center justify-center gap-3 bg-primary text-on-primary px-6 py-3 rounded-full font-label-lg ambient-glow hover:brightness-110 active:scale-95 transition-all no-underline">
                                 <span class="material-symbols-outlined">download</span>
-                                <span id="android-download-text">Download APK</span>
+                                <span id="android-download-text">GitHub (APK)</span>
                             </a>
-                            <p class="text-on-surface-variant font-label-sm">Requires Android 6.0+</p>
+                            <a id="android-download-dropbox-btn"
+                                 href="https://www.dropbox.com/scl/fi/9rre817nlkvl8hv6xotou/auralis-v1-release.apk?rlkey=nqvhmo0wnm65f8nhm86zund5v&st=1vctq2xl&dl=1"
+                                 target="_blank"
+                                class="flex-1 flex items-center justify-center gap-3 bg-secondary-container text-on-secondary-container border border-white/10 px-6 py-3 rounded-full font-label-lg hover:brightness-110 active:scale-95 transition-all no-underline">
+                                <span class="material-symbols-outlined">cloud_download</span>
+                                <span>Dropbox (APK)</span>
+                            </a>
+                            <p class="text-on-surface-variant font-label-sm md:w-auto text-center md:text-left flex-shrink-0">Requires Android 6.0+</p>
                         </div>
                     </div>
                 </div>
@@ -1569,7 +1576,7 @@
     </div>
 
     <!-- Script -->
-    <script src="js/app.js?v=1.0.2"></script>
+    <script src="js/app.js?v=1.0.3"></script>
 </body>
 
 </html>
