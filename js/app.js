@@ -29,6 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const androidVersionBadge = document.getElementById('android-version-badge');
     const windowsVersionBadge = document.getElementById('windows-version-badge');
 
+    // Mobile Navigation Menu Toggle Handler
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('pointer-events-none', 'opacity-0');
+            mobileMenu.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden'; // Lock scrolling
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('opacity-100');
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Unlock scrolling
+        };
+
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
     let allReleases = [
         {
             tag_name: "1.0.0",
@@ -36,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             published_at: "2026-08-15T08:00:00Z",
             body: "### ✨ Auralis v1.0.0 Release Notes\n- 🎵 **Brand New Auralis Release**\n- 🚀 Integrated Time-Synced Lyrics (BetterLyrics Provider)\n- 🔒 Secure Firebase Authentication & Google Sign-In\n- 🎨 Elegant Dark Neon Green Material Design 3 UI\n- 🏎️ Optimizations for smooth streaming & large song cache",
             assets: [
-                { name: "Auralis_v1.0.0_signed.apk", size: 38000000, browser_download_url: "https://github.com/Likith-Yadav/Auralis/releases/download/v1.0.0/Auralis_v1.0.0_signed.apk" }
+                { name: "auralis-v1-release.apk", size: 38000000, browser_download_url: "https://github.com/Likith-Yadav/Auralis/releases/download/v1.0.0/auralis-v1-release.apk" }
             ]
         }
     ];
