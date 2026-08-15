@@ -32,25 +32,25 @@
 
     /* Emulator variables */
     --bg-dark: #050B07;
-    --bg-card: #0E1A12;
-    --bg-surface: #0A140F;
-    --bg-accent: #112217;
+    --bg-card: #141021;
+    --bg-surface: #090A0F;
+    --bg-accent: #1B162B;
     
-    --primary-green: #00E676;
-    --primary-m3-purple: #86EFAC;
-    --primary-green-glow: rgba(0, 230, 118, 0.35);
-    --primary-purple-glow: rgba(134, 239, 172, 0.35);
-    --accent-pink: #10B981;
-    --accent-blue: #00E676;
-    --accent-gold: #22C55E;
+    --primary-green: #A259FF;
+    --primary-m3-purple: #D8B4FE;
+    --primary-green-glow: rgba(162, 89, 255, 0.35);
+    --primary-purple-glow: rgba(216, 180, 254, 0.35);
+    --accent-pink: #C45AF0;
+    --accent-blue: #A259FF;
+    --accent-gold: #8B5CF6;
 
     --text-main: #FFFFFF;
-    --text-secondary: #A7F3D0;
-    --text-muted: #527A5E;
+    --text-secondary: #E9D5FF;
+    --text-muted: #8E7BB0;
 
-    --border-subtle: rgba(0, 230, 118, 0.12);
-    --glass-bg: rgba(14, 26, 18, 0.75);
-    --glass-border: rgba(0, 230, 118, 0.2);
+    --border-subtle: rgba(162, 89, 255, 0.15);
+    --glass-bg: rgba(20, 16, 33, 0.75);
+    --glass-border: rgba(162, 89, 255, 0.25);
 
     --font-main: 'Be Vietnam Pro', 'Outfit', -apple-system, sans-serif;
     --font-headline: 'Epilogue', 'Be Vietnam Pro', sans-serif;

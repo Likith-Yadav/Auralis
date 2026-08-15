@@ -21,7 +21,7 @@ Auralis is designed to offer a premium, modern, and elegant music listening expe
 - **Likith Yadav** - Lead Developer & Creator
   - [Portfolio Website](https://likithyadav.me)
   - [GitHub Profile](https://github.com/Likith-Yadav)
-  - [Instagram](https://instagram.com/likithh_pvt)
+  - [Instagram](https://instagram.com/likithhh_pvt)
 
 ---
 
