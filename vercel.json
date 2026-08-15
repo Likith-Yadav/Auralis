@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/sessions", "destination": "/api/sessions" },
+    { "source": "/sessions/(.*)", "destination": "/api/sessions?path=$1" },
+    { "source": "/song", "destination": "/index.html" },
+    { "source": "/artist", "destination": "/index.html" },
+    { "source": "/album", "destination": "/index.html" },
+    { "source": "/playlist", "destination": "/index.html" }
+  ]
+}
