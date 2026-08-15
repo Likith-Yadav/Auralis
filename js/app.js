@@ -15,15 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Guarantee clicking redirects to the bottom #downloads section
         heroBtn.href = '#downloads';
 
-        const isMobile = isMobileDevice();
-
-        if (isMobile) {
-            heroText.textContent = 'Download APK';
-            if (heroIcon) heroIcon.textContent = 'android';
-        } else {
-            heroText.textContent = 'Download Windows (.exe)';
-            if (heroIcon) heroIcon.textContent = 'laptop_windows';
-        }
+        heroText.textContent = 'Download APK';
+        if (heroIcon) heroIcon.textContent = 'android';
     }
 
     window.addEventListener('resize', updatePlatformDownloadButtons);
