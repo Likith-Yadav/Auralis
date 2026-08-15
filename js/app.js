@@ -19,7 +19,76 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroIcon) heroIcon.textContent = 'android';
     }
 
-    window.addEventListener('resize', updatePlatformDownloadButtons);
+    function handleDeepLinkRedirect() {
+        const path = window.location.pathname.toLowerCase();
+        const searchParams = new URLSearchParams(window.location.search);
+        
+        let appDeepLink = '';
+        let intentLink = '';
+        let title = '';
+
+        if (path.includes('/song')) {
+            const id = searchParams.get('id') || searchParams.get('v');
+            if (id) {
+                appDeepLink = `auralis://song?id=${id}`;
+                intentLink = `intent://auralismusicapp.vercel.app/song?id=${id}#Intent;scheme=https;package=com.auralis.music;end`;
+                title = 'Song Link';
+            }
+        } else if (path.includes('/join')) {
+            const code = searchParams.get('code');
+            if (code) {
+                appDeepLink = `auralis://join?code=${code}`;
+                intentLink = `intent://auralismusicapp.vercel.app/join?code=${code}#Intent;scheme=https;package=com.auralis.music;end`;
+                title = `Listen Together Session #${code}`;
+            }
+        } else if (path.includes('/artist')) {
+            const id = searchParams.get('id');
+            if (id) {
+                appDeepLink = `auralis://artist/${id}`;
+                intentLink = `intent://auralismusicapp.vercel.app/artist/${id}#Intent;scheme=https;package=com.auralis.music;end`;
+                title = 'Artist Link';
+            }
+        } else if (path.includes('/album')) {
+            const id = searchParams.get('id');
+            if (id) {
+                appDeepLink = `auralis://album/${id}`;
+                intentLink = `intent://auralismusicapp.vercel.app/album/${id}#Intent;scheme=https;package=com.auralis.music;end`;
+                title = 'Album Link';
+            }
+        } else if (path.includes('/playlist')) {
+            const id = searchParams.get('id');
+            if (id) {
+                appDeepLink = `auralis://online_playlist/${id}`;
+                intentLink = `intent://auralismusicapp.vercel.app/online_playlist/${id}#Intent;scheme=https;package=com.auralis.music;end`;
+                title = 'Playlist Link';
+            }
+        }
+
+        if (appDeepLink) {
+            if (isMobileDevice()) {
+                window.location.href = intentLink;
+            }
+
+            const banner = document.createElement('div');
+            banner.className = 'fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 to-indigo-900 text-white p-4 shadow-2xl flex items-center justify-between border-b border-purple-500/30';
+            banner.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <img src="assets/icon.png" class="w-10 h-10 rounded-full border border-purple-400/50" alt="Auralis">
+                    <div>
+                        <div class="font-bold text-sm text-purple-200">Auralis Music</div>
+                        <div class="text-xs text-purple-300">Open ${title} in the Auralis App</div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <a href="${intentLink}" class="bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg transition-transform transform active:scale-95">Open App</a>
+                    <a href="${appDeepLink}" class="hidden sm:inline-block bg-white/10 hover:bg-white/20 text-xs px-3 py-2 rounded-full border border-white/20">Direct Link</a>
+                </div>
+            `;
+            document.body.prepend(banner);
+        }
+    }
+
+    handleDeepLinkRedirect();
 
     // ═══════════════════════ DOM ELEMENTS & RELEASES ═══════════════════════
     const logo = document.getElementById('logo');

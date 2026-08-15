@@ -6,6 +6,8 @@
     { "source": "/song", "destination": "/index.html" },
     { "source": "/artist", "destination": "/index.html" },
     { "source": "/album", "destination": "/index.html" },
-    { "source": "/playlist", "destination": "/index.html" }
+    { "source": "/playlist", "destination": "/index.html" },
+    { "source": "/join", "destination": "/index.html" },
+    { "source": "/join/(.*)", "destination": "/index.html" }
   ]
 }
